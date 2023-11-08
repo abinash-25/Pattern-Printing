@@ -1,0 +1,24 @@
+s=input()
+length=len(s)
+middle=length//2
+i=0
+j=length-1
+inside_space=(j-i)-1
+front_space=0
+while(i<j and i!=middle):
+    print(" "*front_space+s[i]+(" "*(inside_space))+s[j])
+    i+=1
+    j-=1
+    inside_space=(j-i)-1
+    front_space+=1
+print(" "*(middle) + s[i])
+i=i-1
+j+=1
+inside_space=(j-i)-1
+front_space-=1
+while(i>=0 and j<length):
+    print(" "*front_space+s[i]+(" "*inside_space)+s[j])
+    i-=1
+    j+=1
+    inside_space=(j-i)-1
+    front_space-=1
